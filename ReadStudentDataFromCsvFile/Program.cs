@@ -23,8 +23,12 @@ namespace ReadStudentDataFromCsvFile
             int choice;
             do
             {
-                ShowMenu();
-                Console.WriteLine();
+                Console.Clear();
+                Console.WriteLine("\n1 - Display All Students");
+                Console.WriteLine("2 - Sort by Marks (High to Low)");
+                Console.WriteLine("3 - Show Top 3 Students");
+                Console.WriteLine("4 - Find Highest Scorer");
+                Console.WriteLine("5 - Exit\n");
 
                 // keeps looping until the user enters a valid integer choice
                 do
@@ -56,7 +60,6 @@ namespace ReadStudentDataFromCsvFile
             }
             while (choice != 5);
         }
-
 
         static List<Student> LoadStudentsFromFile(string filePath)
         {
@@ -93,17 +96,6 @@ namespace ReadStudentDataFromCsvFile
             }
 
             return students;
-        }
-
-        static void ShowMenu()
-        {
-            Console.Clear();
-
-            Console.WriteLine("1 - Display All Students");
-            Console.WriteLine("2 - Sort by Marks (High to Low)");
-            Console.WriteLine("3 - Show Top 3 Students");
-            Console.WriteLine("4 - Find Highest Scorer");
-            Console.WriteLine("5 - Exit");
         }
 
         static void ShowAllStudents(List<Student> students)
