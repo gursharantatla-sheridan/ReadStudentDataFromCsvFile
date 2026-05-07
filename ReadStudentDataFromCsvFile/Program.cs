@@ -7,6 +7,8 @@ namespace ReadStudentDataFromCsvFile
     {
         static void Main(string[] args)
         {
+            // set the csv file property "Copy to Output Directory" to "Copy if newer"
+            // OR
             // place the csv file in the same folder as C# executable (bin/Debug/net)
             string filePath = "students.csv";
 
@@ -55,6 +57,7 @@ namespace ReadStudentDataFromCsvFile
                         break;
                     default:
                         Console.WriteLine("\nInvalid choice.");
+                        Console.ReadKey();
                         break;
                 }
             }
