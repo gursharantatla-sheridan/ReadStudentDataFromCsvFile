@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using ConsoleTables;
+using ConsoleTables;  // install this NuGet package: ConsoleTables
 
 namespace ReadStudentDataFromCsvFile
 {
@@ -56,7 +56,7 @@ namespace ReadStudentDataFromCsvFile
                         Console.WriteLine("\nExiting program...");
                         break;
                     default:
-                        Console.WriteLine("\nInvalid choice.");
+                        Console.WriteLine("\nInvalid choice. Press any key to continue...");
                         Console.ReadKey();
                         break;
                 }
